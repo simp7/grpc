@@ -1,0 +1,29 @@
+syntax = "proto3";
+package ecommerce;
+option go_package = "github.com/simp7/grpc/gen/go/auth";
+
+import "google/protobuf/wrappers.proto";
+
+service Auth {
+  rpc registerUser(User) returns (google.protobuf.UInt32Value);
+  rpc unregisterUser(User) returns (google.protobuf.UInt32Value);
+  rpc login(LoginInfo) returns (User);
+}
+
+message LoginInfo {
+  string id = 1;
+  string password = 2;
+}
+
+message User {
+  uint32 uid = 1;
+  string id = 2;
+  string password = 3;
+  string name = 4;
+  optional string description = 16;
+}
+
+message UserResult {
+  string errMessage = 1;
+  uint32 uid = 2;
+}
