@@ -1,6 +1,6 @@
 syntax = "proto3";
 package ecommerce;
-option go_package = "github.com/simp7/grpc/gen/go/auth";
+option go_package = "github.com/simp7/idl/gen/go/auth";
 
 import "google/protobuf/wrappers.proto";
 
