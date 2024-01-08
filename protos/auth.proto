@@ -1,6 +1,6 @@
 syntax = "proto3";
 package ecommerce;
-option go_package = "github.com/simp7/idl/gen/go/auth";
+option go_package = "./auth";
 
 import "google/protobuf/wrappers.proto";
 
@@ -16,7 +16,7 @@ message LoginInfo {
 }
 
 message User {
-  uint32 uid = 1;
+  uint64 uid = 1;
   string id = 2;
   string password = 3;
   string name = 4;
@@ -24,6 +24,6 @@ message User {
 }
 
 message UserResult {
-  string errMessage = 1;
-  uint32 uid = 2;
+  uint64 uid = 1;
+  string token = 2;
 }
