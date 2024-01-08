@@ -1,29 +1,57 @@
 syntax = "proto3";
-package ecommerce;
+package auth;
+
 option go_package = "./auth";
 
-import "google/protobuf/wrappers.proto";
-
 service Auth {
-  rpc registerUser(User) returns (google.protobuf.UInt32Value);
-  rpc unregisterUser(User) returns (google.protobuf.UInt32Value);
-  rpc login(LoginInfo) returns (User);
+  rpc RegisterUser(RegisterRequest) returns (RegisterResponse);
+  rpc UnregisterUser(UnregisterRequest) returns (UnregisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc Logout(LogoutRequest) returns (LogoutResponse);
 }
 
-message LoginInfo {
-  string id = 1;
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string nickname = 3;
+}
+
+message RegisterResponse {
+  string token = 1;
+}
+
+message UnregisterRequest {
+  string token = 1;
+}
+
+message UnregisterResponse {
+  bool success = 1;
+}
+
+message TraditionalLoginRequest {
+  string email = 1;
   string password = 2;
 }
 
-message User {
-  uint64 uid = 1;
-  string id = 2;
-  string password = 3;
-  string name = 4;
-  optional string description = 16;
+message OAuthLoginRequest {
+  string access_token  = 1;
 }
 
-message UserResult {
-  uint64 uid = 1;
-  string token = 2;
+message LoginRequest {
+  oneof method {
+    TraditionalLoginRequest traditional = 1;
+    OAuthLoginRequest oauth = 2;
+  }
+}
+
+message LoginResponse {
+  string token = 1;
+}
+
+message LogoutRequest {
+  string token = 1;
+}
+
+message LogoutResponse {
+  string token = 1;
 }
