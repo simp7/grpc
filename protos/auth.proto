@@ -21,7 +21,8 @@ message RegisterResponse {
 }
 
 message UnregisterRequest {
-  string token = 1;
+  reserved 1;
+  uint64 uid = 2;
 }
 
 message UnregisterResponse {
