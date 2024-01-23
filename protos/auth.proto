@@ -2,9 +2,9 @@ syntax = "proto3";
 package auth;
 
 option go_package = "./auth";
-option java_multiple_files = true;
 option java_package = "com.github.simp7.idl.auth";
 option java_outer_classname = "AuthProto";
+option java_multiple_files = true;
 
 service Auth {
   rpc RegisterUser(RegisterRequest) returns (RegisterResponse);
