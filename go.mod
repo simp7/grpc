@@ -1,6 +1,6 @@
-module github.com/simp7/idl/gen/go
+module github.com/simp7/idl
 
-go 1.21.5
+go 1.21.6
 
 require (
 	google.golang.org/grpc v1.61.0
