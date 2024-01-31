@@ -20,12 +20,12 @@ message RegisterRequest {
 }
 
 message RegisterResponse {
-  string token = 1;
+  string access_token = 1;
+  string refresh_token = 2;
 }
 
 message UnregisterRequest {
-  reserved 1;
-  uint64 uid = 2;
+  uint64 uid = 1;
 }
 
 message UnregisterResponse {
@@ -38,7 +38,7 @@ message TraditionalLoginRequest {
 }
 
 message OAuthLoginRequest {
-  string access_token  = 1;
+  string access_token = 1;
 }
 
 message LoginRequest {
@@ -49,13 +49,14 @@ message LoginRequest {
 }
 
 message LoginResponse {
-  string token = 1;
+  string access_token = 1;
+  string refresh_token = 2;
 }
 
 message LogoutRequest {
-  string token = 1;
+  string refresh_token = 1;
 }
 
 message LogoutResponse {
-  string token = 1;
+  string refresh_token = 1;
 }

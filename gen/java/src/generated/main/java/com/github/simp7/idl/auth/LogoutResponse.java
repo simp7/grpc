@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private LogoutResponse() {
-    token_ = "";
+    refreshToken_ = "";
   }
 
   @java.lang.Override
@@ -39,39 +39,39 @@ private static final long serialVersionUID = 0L;
             com.github.simp7.idl.auth.LogoutResponse.class, com.github.simp7.idl.auth.LogoutResponse.Builder.class);
   }
 
-  public static final int TOKEN_FIELD_NUMBER = 1;
+  public static final int REFRESH_TOKEN_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object token_ = "";
+  private volatile java.lang.Object refreshToken_ = "";
   /**
-   * <code>string token = 1;</code>
-   * @return The token.
+   * <code>string refresh_token = 1;</code>
+   * @return The refreshToken.
    */
   @java.lang.Override
-  public java.lang.String getToken() {
-    java.lang.Object ref = token_;
+  public java.lang.String getRefreshToken() {
+    java.lang.Object ref = refreshToken_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      token_ = s;
+      refreshToken_ = s;
       return s;
     }
   }
   /**
-   * <code>string token = 1;</code>
-   * @return The bytes for token.
+   * <code>string refresh_token = 1;</code>
+   * @return The bytes for refreshToken.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getTokenBytes() {
-    java.lang.Object ref = token_;
+      getRefreshTokenBytes() {
+    java.lang.Object ref = refreshToken_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      token_ = b;
+      refreshToken_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -92,8 +92,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refreshToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, refreshToken_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refreshToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, refreshToken_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -122,8 +122,8 @@ private static final long serialVersionUID = 0L;
     }
     com.github.simp7.idl.auth.LogoutResponse other = (com.github.simp7.idl.auth.LogoutResponse) obj;
 
-    if (!getToken()
-        .equals(other.getToken())) return false;
+    if (!getRefreshToken()
+        .equals(other.getRefreshToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-    hash = (53 * hash) + getToken().hashCode();
+    hash = (37 * hash) + REFRESH_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getRefreshToken().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      token_ = "";
+      refreshToken_ = "";
       return this;
     }
 
@@ -303,7 +303,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.github.simp7.idl.auth.LogoutResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.token_ = token_;
+        result.refreshToken_ = refreshToken_;
       }
     }
 
@@ -351,8 +351,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.github.simp7.idl.auth.LogoutResponse other) {
       if (other == com.github.simp7.idl.auth.LogoutResponse.getDefaultInstance()) return this;
-      if (!other.getToken().isEmpty()) {
-        token_ = other.token_;
+      if (!other.getRefreshToken().isEmpty()) {
+        refreshToken_ = other.refreshToken_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -383,7 +383,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              token_ = input.readStringRequireUtf8();
+              refreshToken_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -404,73 +404,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object token_ = "";
+    private java.lang.Object refreshToken_ = "";
     /**
-     * <code>string token = 1;</code>
-     * @return The token.
+     * <code>string refresh_token = 1;</code>
+     * @return The refreshToken.
      */
-    public java.lang.String getToken() {
-      java.lang.Object ref = token_;
+    public java.lang.String getRefreshToken() {
+      java.lang.Object ref = refreshToken_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        token_ = s;
+        refreshToken_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string token = 1;</code>
-     * @return The bytes for token.
+     * <code>string refresh_token = 1;</code>
+     * @return The bytes for refreshToken.
      */
     public com.google.protobuf.ByteString
-        getTokenBytes() {
-      java.lang.Object ref = token_;
+        getRefreshTokenBytes() {
+      java.lang.Object ref = refreshToken_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        token_ = b;
+        refreshToken_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string token = 1;</code>
-     * @param value The token to set.
+     * <code>string refresh_token = 1;</code>
+     * @param value The refreshToken to set.
      * @return This builder for chaining.
      */
-    public Builder setToken(
+    public Builder setRefreshToken(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      token_ = value;
+      refreshToken_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string token = 1;</code>
+     * <code>string refresh_token = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearToken() {
-      token_ = getDefaultInstance().getToken();
+    public Builder clearRefreshToken() {
+      refreshToken_ = getDefaultInstance().getRefreshToken();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string token = 1;</code>
-     * @param value The bytes for token to set.
+     * <code>string refresh_token = 1;</code>
+     * @param value The bytes for refreshToken to set.
      * @return This builder for chaining.
      */
-    public Builder setTokenBytes(
+    public Builder setRefreshTokenBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      token_ = value;
+      refreshToken_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

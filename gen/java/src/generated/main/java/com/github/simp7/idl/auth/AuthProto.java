@@ -75,25 +75,27 @@ public final class AuthProto {
     java.lang.String[] descriptorData = {
       "\n\nauth.proto\022\004auth\"D\n\017RegisterRequest\022\r\n" +
       "\005email\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\020\n\010nickna" +
-      "me\030\003 \001(\t\"!\n\020RegisterResponse\022\r\n\005token\030\001 " +
-      "\001(\t\"&\n\021UnregisterRequest\022\013\n\003uid\030\002 \001(\004J\004\010" +
-      "\001\020\002\"%\n\022UnregisterResponse\022\017\n\007success\030\001 \001" +
-      "(\010\":\n\027TraditionalLoginRequest\022\r\n\005email\030\001" +
-      " \001(\t\022\020\n\010password\030\002 \001(\t\")\n\021OAuthLoginRequ" +
-      "est\022\024\n\014access_token\030\001 \001(\t\"x\n\014LoginReques" +
-      "t\0224\n\013traditional\030\001 \001(\0132\035.auth.Traditiona" +
-      "lLoginRequestH\000\022(\n\005oauth\030\002 \001(\0132\027.auth.OA" +
-      "uthLoginRequestH\000B\010\n\006method\"\036\n\rLoginResp" +
-      "onse\022\r\n\005token\030\001 \001(\t\"\036\n\rLogoutRequest\022\r\n\005" +
-      "token\030\001 \001(\t\"\037\n\016LogoutResponse\022\r\n\005token\030\001" +
-      " \001(\t2\361\001\n\004Auth\022=\n\014RegisterUser\022\025.auth.Reg" +
-      "isterRequest\032\026.auth.RegisterResponse\022C\n\016" +
-      "UnregisterUser\022\027.auth.UnregisterRequest\032" +
-      "\030.auth.UnregisterResponse\0220\n\005Login\022\022.aut" +
-      "h.LoginRequest\032\023.auth.LoginResponse\0223\n\006L" +
-      "ogout\022\023.auth.LogoutRequest\032\024.auth.Logout" +
-      "ResponseB0\n\031com.github.simp7.idl.authB\tA" +
-      "uthProtoP\001Z\006./authb\006proto3"
+      "me\030\003 \001(\t\"?\n\020RegisterResponse\022\024\n\014access_t" +
+      "oken\030\001 \001(\t\022\025\n\rrefresh_token\030\002 \001(\t\" \n\021Unr" +
+      "egisterRequest\022\013\n\003uid\030\001 \001(\004\"%\n\022Unregiste" +
+      "rResponse\022\017\n\007success\030\001 \001(\010\":\n\027Traditiona" +
+      "lLoginRequest\022\r\n\005email\030\001 \001(\t\022\020\n\010password" +
+      "\030\002 \001(\t\")\n\021OAuthLoginRequest\022\024\n\014access_to" +
+      "ken\030\001 \001(\t\"x\n\014LoginRequest\0224\n\013traditional" +
+      "\030\001 \001(\0132\035.auth.TraditionalLoginRequestH\000\022" +
+      "(\n\005oauth\030\002 \001(\0132\027.auth.OAuthLoginRequestH" +
+      "\000B\010\n\006method\"<\n\rLoginResponse\022\024\n\014access_t" +
+      "oken\030\001 \001(\t\022\025\n\rrefresh_token\030\002 \001(\t\"&\n\rLog" +
+      "outRequest\022\025\n\rrefresh_token\030\001 \001(\t\"\'\n\016Log" +
+      "outResponse\022\025\n\rrefresh_token\030\001 \001(\t2\361\001\n\004A" +
+      "uth\022=\n\014RegisterUser\022\025.auth.RegisterReque" +
+      "st\032\026.auth.RegisterResponse\022C\n\016Unregister" +
+      "User\022\027.auth.UnregisterRequest\032\030.auth.Unr" +
+      "egisterResponse\0220\n\005Login\022\022.auth.LoginReq" +
+      "uest\032\023.auth.LoginResponse\0223\n\006Logout\022\023.au" +
+      "th.LogoutRequest\032\024.auth.LogoutResponseB0" +
+      "\n\031com.github.simp7.idl.authB\tAuthProtoP\001" +
+      "Z\006./authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -110,7 +112,7 @@ public final class AuthProto {
     internal_static_auth_RegisterResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_auth_RegisterResponse_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "AccessToken", "RefreshToken", });
     internal_static_auth_UnregisterRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_auth_UnregisterRequest_fieldAccessorTable = new
@@ -146,19 +148,19 @@ public final class AuthProto {
     internal_static_auth_LoginResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_auth_LoginResponse_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "AccessToken", "RefreshToken", });
     internal_static_auth_LogoutRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_auth_LogoutRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_auth_LogoutRequest_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "RefreshToken", });
     internal_static_auth_LogoutResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_auth_LogoutResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_auth_LogoutResponse_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "RefreshToken", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

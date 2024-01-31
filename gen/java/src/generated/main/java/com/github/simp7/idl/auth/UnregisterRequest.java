@@ -38,10 +38,10 @@ private static final long serialVersionUID = 0L;
             com.github.simp7.idl.auth.UnregisterRequest.class, com.github.simp7.idl.auth.UnregisterRequest.Builder.class);
   }
 
-  public static final int UID_FIELD_NUMBER = 2;
+  public static final int UID_FIELD_NUMBER = 1;
   private long uid_ = 0L;
   /**
-   * <code>uint64 uid = 2;</code>
+   * <code>uint64 uid = 1;</code>
    * @return The uid.
    */
   @java.lang.Override
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (uid_ != 0L) {
-      output.writeUInt64(2, uid_);
+      output.writeUInt64(1, uid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (uid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(2, uid_);
+        .computeUInt64Size(1, uid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -353,11 +353,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 16: {
+            case 8: {
               uid_ = input.readUInt64();
               bitField0_ |= 0x00000001;
               break;
-            } // case 16
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
 
     private long uid_ ;
     /**
-     * <code>uint64 uid = 2;</code>
+     * <code>uint64 uid = 1;</code>
      * @return The uid.
      */
     @java.lang.Override
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
       return uid_;
     }
     /**
-     * <code>uint64 uid = 2;</code>
+     * <code>uint64 uid = 1;</code>
      * @param value The uid to set.
      * @return This builder for chaining.
      */
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>uint64 uid = 2;</code>
+     * <code>uint64 uid = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearUid() {

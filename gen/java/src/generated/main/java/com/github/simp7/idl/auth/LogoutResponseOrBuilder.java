@@ -8,14 +8,14 @@ public interface LogoutResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string token = 1;</code>
-   * @return The token.
+   * <code>string refresh_token = 1;</code>
+   * @return The refreshToken.
    */
-  java.lang.String getToken();
+  java.lang.String getRefreshToken();
   /**
-   * <code>string token = 1;</code>
-   * @return The bytes for token.
+   * <code>string refresh_token = 1;</code>
+   * @return The bytes for refreshToken.
    */
   com.google.protobuf.ByteString
-      getTokenBytes();
+      getRefreshTokenBytes();
 }

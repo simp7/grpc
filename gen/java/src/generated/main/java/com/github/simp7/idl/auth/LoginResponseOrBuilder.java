@@ -8,14 +8,26 @@ public interface LoginResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string token = 1;</code>
-   * @return The token.
+   * <code>string access_token = 1;</code>
+   * @return The accessToken.
    */
-  java.lang.String getToken();
+  java.lang.String getAccessToken();
   /**
-   * <code>string token = 1;</code>
-   * @return The bytes for token.
+   * <code>string access_token = 1;</code>
+   * @return The bytes for accessToken.
    */
   com.google.protobuf.ByteString
-      getTokenBytes();
+      getAccessTokenBytes();
+
+  /**
+   * <code>string refresh_token = 2;</code>
+   * @return The refreshToken.
+   */
+  java.lang.String getRefreshToken();
+  /**
+   * <code>string refresh_token = 2;</code>
+   * @return The bytes for refreshToken.
+   */
+  com.google.protobuf.ByteString
+      getRefreshTokenBytes();
 }

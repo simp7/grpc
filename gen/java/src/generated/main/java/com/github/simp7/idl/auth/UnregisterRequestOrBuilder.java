@@ -8,7 +8,7 @@ public interface UnregisterRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>uint64 uid = 2;</code>
+   * <code>uint64 uid = 1;</code>
    * @return The uid.
    */
   long getUid();
